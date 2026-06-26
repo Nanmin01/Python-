@@ -1,0 +1,38 @@
+if __name__ == '__main__':
+    scores = []
+    students = []
+    sorted_scores = []
+    second_min_names = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+       
+    # add the score to a new list named scores
+    #Add the key  name and the values score in the 
+    #list students      
+        students.append([name, score])
+
+        scores.append(score)
+    
+    #Create a variable named sorted_scores which
+    #contain the sorted score
+
+    sorted_scores = sorted(set(scores))
+    
+    #Create a variable min_score and store the 2nd minumum score
+    
+    min_scores = sorted_scores[1]
+    
+    #create a list to stores all the names who have the second min
+    #students[i][1] means the getting the score at position i. [i][0] means
+    #getting the names at position i. student is a tuple  with names and scores. 
+    for i in range(len(students)):
+        if students[i][1] == min_scores:
+            second_min_names.append(students[i][0]) 
+        
+    #sort the names in the list in alphabetical order    
+    (second_min_names).sort()
+    
+    #print the results  
+    for i in range(len(second_min_names)):
+        print(second_min_names[i])
