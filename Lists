@@ -1,0 +1,35 @@
+if __name__ == '__main__':
+    N = int(input())
+    
+    #initialise the new list called New_List to store the new integers and to perform
+    #all the command
+    
+    New_List = []
+
+
+# The purpose of the for loop is to first read the line command and automatically in the same process 
+#execute that command with the if statement. Know that for each line command[0] is the command to execute
+#and command[1] or command [2] are integers.  
+for _ in range(N):
+    command = input().split()
+
+    if command[0] == "insert":
+        New_List.insert(int(command[1]), int(command[2]))
+
+    elif command[0] == "print":
+        print(New_List)
+
+    elif command[0] == "remove":
+        New_List.remove(int(command[1]))
+
+    elif command[0] == "append":
+        New_List.append(int(command[1]))
+
+    elif command[0] == "sort":
+        New_List.sort()
+
+    elif command[0] == "pop":
+        New_List.pop()
+
+    elif command[0] == "reverse":
+        New_List.reverse()
