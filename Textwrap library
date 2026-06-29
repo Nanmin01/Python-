@@ -1,0 +1,16 @@
+import textwrap
+
+def wrap(string, max_width):
+
+    #In the library textwrap the function .fill(text, width = 10) takes a string text
+    # and divide it into length 10 and print each new string of lenght 10 on a new line 
+    #until the end of the string Text. 
+    
+    #New_maxwidth_string represent the new string of length maxwidth
+    New_maxwidth_string = textwrap.fill(string, width= max_width)
+    return New_maxwidth_string
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
