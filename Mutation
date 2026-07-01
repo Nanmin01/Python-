@@ -1,0 +1,7 @@
+def mutate_string(string, position, character):
+    
+    #this line bellow remove the character in the spot position and replace 
+    # it with the new character (parameter in the function). Then it start from
+    # position+1 and add the rest of the string. 
+    string = string[:position] + character + string[position+1:]
+    return string
